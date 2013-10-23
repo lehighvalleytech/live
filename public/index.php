@@ -5,17 +5,6 @@ require_once '../vendor/autoload.php';
 ini_set('date.timezone', 'UTC');
 $app = new App();
 
-
-$cache = Zend\Cache\StorageFactory::factory(array(
-    'adapter' => array(
-        'name'    => 'apc',
-        'options' => array('ttl' => 3600),
-    ),
-    'plugins' => array(
-        'exception_handler' => array('throw_exceptions' => false),
-    ),
-));
-
 /**
  * Podcast Feeds
  */
@@ -31,7 +20,7 @@ $route = SegmentRoute::factory(array(
     ),
 ));
 
-$app->get($route, function (App $app) use ($cache) {
+$app->get($route, function (App $app) {
     $name   = $app->params()->getParam('name');
     $format = $app->params()->getParam('format');
 
@@ -49,7 +38,7 @@ $app->get($route, function (App $app) use ($cache) {
             $app->halt('invalid feed');
     }
 
-    $soundcloud = new LVTech\Services\Soundcloud\CachedClient(getenv('SOUNDCLOUD_KEY'), LVTech\Services\Soundcloud\Client::API, $cache);
+    $soundcloud = new LVTech\Services\Soundcloud\Client(getenv('SOUNDCLOUD_KEY'));
     $playlist = $soundcloud->getPlaylist($playlist);
 
     switch($format){
