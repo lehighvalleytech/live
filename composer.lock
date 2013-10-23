@@ -1,0 +1,273 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "a1775c44eed58d07e06023c5c7818247",
+    "packages": [
+        {
+            "name": "mustache/mustache",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/mustache.php.git",
+                "reference": "6ac9cf03e47a0ca38257ef0aca765d0733f3c62c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/6ac9cf03e47a0ca38257ef0aca765d0733f3c62c",
+                "reference": "6ac9cf03e47a0ca38257ef0aca765d0733f3c62c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mustache": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Hileman",
+                    "email": "justin@justinhileman.info",
+                    "homepage": "http://justinhileman.com"
+                }
+            ],
+            "description": "A Mustache implementation in PHP.",
+            "homepage": "https://github.com/bobthecow/mustache.php",
+            "keywords": [
+                "mustache",
+                "templating"
+            ],
+            "time": "2013-01-12 07:18:03"
+        },
+        {
+            "name": "phly/mustache",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phly/phly_mustache.git",
+                "reference": "4ba9470a6b54913967bff4231dc615dfd19c1f4f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phly/phly_mustache/zipball/4ba9470a6b54913967bff4231dc615dfd19c1f4f",
+                "reference": "4ba9470a6b54913967bff4231dc615dfd19c1f4f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phly": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Weier O'Phinney",
+                    "email": "me@mwop.net",
+                    "homepage": "http://mwop.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP 5.3 Mustache Implementation",
+            "homepage": "http://wiki.github.com/weierophinney/phly_mustache/",
+            "keywords": [
+                "mustache"
+            ],
+            "time": "2012-08-01 03:33:14"
+        },
+        {
+            "name": "phly/phlyty",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phly/phlyty.git",
+                "reference": "2cb059642be972e8978b0c7ea64c9a27ac98b501"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phly/phlyty/zipball/2cb059642be972e8978b0c7ea64c9a27ac98b501",
+                "reference": "2cb059642be972e8978b0c7ea64c9a27ac98b501",
+                "shasum": ""
+            },
+            "require": {
+                "phly/mustache": ">=1.2.0",
+                "php": ">=5.4.0",
+                "zendframework/zend-escaper": "2.*",
+                "zendframework/zend-eventmanager": "2.*",
+                "zendframework/zend-http": "2.*",
+                "zendframework/zend-i18n": "2.*",
+                "zendframework/zend-log": "2.*",
+                "zendframework/zend-mvc": "2.*",
+                "zendframework/zend-session": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phlyty": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Weier O'Phinney",
+                    "email": "me@mwop.net",
+                    "homepage": "http://mwop.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP 5.4 Microframework built on top of ZF2 components",
+            "homepage": "http://github.com/weierophinney/phlyty",
+            "keywords": [
+                "microframework",
+                "mvc",
+                "zf2"
+            ],
+            "time": "2013-05-23 18:13:52"
+        },
+        {
+            "name": "zendframework/zendframework",
+            "version": "2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zf2.git",
+                "reference": "57de1d9e3fe0564d2572e0a961e905ae2279c003"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packages.zendframework.com/composer/zendframework-zendframework-57de1d9e3fe0564d2572e0a961e905ae2279c003-zip-992dda.zip",
+                "reference": "2.0.8",
+                "shasum": "0b8790b1e9f5cbb5b50c0443851b26e1ed36e80c"
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "replace": {
+                "zendframework/zend-authentication": "self.version",
+                "zendframework/zend-barcode": "self.version",
+                "zendframework/zend-cache": "self.version",
+                "zendframework/zend-captcha": "self.version",
+                "zendframework/zend-code": "self.version",
+                "zendframework/zend-config": "self.version",
+                "zendframework/zend-console": "self.version",
+                "zendframework/zend-crypt": "self.version",
+                "zendframework/zend-db": "self.version",
+                "zendframework/zend-debug": "self.version",
+                "zendframework/zend-di": "self.version",
+                "zendframework/zend-dom": "self.version",
+                "zendframework/zend-escaper": "self.version",
+                "zendframework/zend-eventmanager": "self.version",
+                "zendframework/zend-feed": "self.version",
+                "zendframework/zend-file": "self.version",
+                "zendframework/zend-filter": "self.version",
+                "zendframework/zend-form": "self.version",
+                "zendframework/zend-http": "self.version",
+                "zendframework/zend-i18n": "self.version",
+                "zendframework/zend-inputfilter": "self.version",
+                "zendframework/zend-json": "self.version",
+                "zendframework/zend-ldap": "self.version",
+                "zendframework/zend-loader": "self.version",
+                "zendframework/zend-log": "self.version",
+                "zendframework/zend-mail": "self.version",
+                "zendframework/zend-math": "self.version",
+                "zendframework/zend-memory": "self.version",
+                "zendframework/zend-mime": "self.version",
+                "zendframework/zend-modulemanager": "self.version",
+                "zendframework/zend-mvc": "self.version",
+                "zendframework/zend-navigation": "self.version",
+                "zendframework/zend-paginator": "self.version",
+                "zendframework/zend-permissions-acl": "self.version",
+                "zendframework/zend-progressbar": "self.version",
+                "zendframework/zend-serializer": "self.version",
+                "zendframework/zend-server": "self.version",
+                "zendframework/zend-servicemanager": "self.version",
+                "zendframework/zend-session": "self.version",
+                "zendframework/zend-soap": "self.version",
+                "zendframework/zend-stdlib": "self.version",
+                "zendframework/zend-tag": "self.version",
+                "zendframework/zend-text": "self.version",
+                "zendframework/zend-uri": "self.version",
+                "zendframework/zend-validator": "self.version",
+                "zendframework/zend-version": "self.version",
+                "zendframework/zend-view": "self.version",
+                "zendframework/zend-xmlrpc": "self.version"
+            },
+            "require-dev": {
+                "doctrine/common": ">=2.1",
+                "ircmaxell/random-lib": "dev-master@dev",
+                "ircmaxell/security-lib": "dev-master@dev",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "doctrine/common": "Doctrine\\Common >=2.1 for annotation features",
+                "ext-intl": "ext/intl for i18n features",
+                "ircmaxell/random-lib": "Fallback random byte generator for Zend\\Math\\Rand if OpenSSL/Mcrypt extensions are unavailable",
+                "pecl-weakref": "Implementation of weak references for Zend\\Stdlib\\CallbackHandler",
+                "zendframework/zendpdf": "ZendPdf for creating PDF representations of barcodes",
+                "zendframework/zendservice-recaptcha": "ZendService\\ReCaptcha for rendering ReCaptchas in Zend\\Captcha and/or Zend\\Form"
+            },
+            "bin": [
+                "bin/classmap_generator.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev",
+                    "dev-develop": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\": "library/",
+                    "ZendTest\\": "tests/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Framework 2",
+            "homepage": "http://framework.zend.com/",
+            "keywords": [
+                "framework",
+                "zf2"
+            ],
+            "support": {
+                "source": "https://github.com/zendframework/zf2/tree/release-2.0.8",
+                "issues": "https://github.com/zendframework/zf2/issues"
+            },
+            "time": "2013-03-13 22:11:24"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

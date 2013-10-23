@@ -1,0 +1,22 @@
+{
+    "name": "lvtech/live",
+    "description": "audio/video streaming for lvtech",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packages.zendframework.com/"
+        }
+    ],
+    "require": {
+        "zendframework/zendframework": "2.0.*",
+        "mustache/mustache": "v2.1.0",
+        "phly/phlyty": "1.0.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "IceCast": "lib/",
+            "Meetup": "lib/",
+            "LVTech": "lib/"
+        }
+    }      
+}
