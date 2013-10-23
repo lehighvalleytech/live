@@ -79,6 +79,7 @@ class Client
 
         if(!$response->isOk()){
             throw new \RuntimeException('unexpected result from soundcloud');
+
         }
 
         $oembed = new Resource\Oembed($response->getBody());

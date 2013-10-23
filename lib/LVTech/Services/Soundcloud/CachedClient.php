@@ -23,26 +23,14 @@ class CachedClient extends Client
         parent::__construct($key, $api);
     }
 
-    /**
-     * Grab a playlist. Fun times.
-     *
-     * @param string $id
-     */
-    public function getPlaylist($id, $uri = self::API_PLAYLIST)
-    {
-        if(!$return = $this->cache->getItem($id . $uri)){
-            $return = parent::getPlaylist($id, $uri);
-            $this->cache->setItem($id . $uri, $return);
-        }
-
-        return $return;
-    }
-
     public function getOembed($url, $uri = self::API_OEMBED)
     {
-        if(!$return = $this->cache->getItem($url . $uri)){
+        $hash = md5($url.$uri);
+        if(!$return = $this->cache->getItem($hash)){
             $return = parent::getOembed($url, $uri);
-            $this->cache->setItem($url . $uri, $return);
+            $this->cache->setItem($hash, serialize($return));
+        } else {
+            $return = unserialize($return);
         }
 
         return $return;
