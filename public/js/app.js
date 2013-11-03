@@ -2,11 +2,10 @@
  * certainly not the best example of an angular app
  */
 
-var lvtr = angular.module('lvtechradio', []);
+var lvtr = angular.module('lvtechradio', ['linkify']);
 
 lvtr.controller('FeedCtrl', ['$scope', '$http', function($scope, $http){
     $http.get('/feed/lvtech.json').success(function(data){
-        angular.forEach()
         $scope.lvtech = data;
     });
 

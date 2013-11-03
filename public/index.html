@@ -11,11 +11,13 @@
 
   <!-- Bootstrap core -->
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-  <script src="/js/app.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+  <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+  <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/angular-linkify.min.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
 
   <!-- Custom styles for this template -->
   <style>
@@ -88,27 +90,56 @@
 
   <div class="container" id="feeds" ng-controller="FeedCtrl">
     <div class="tab-content">
+
+      <!-- LVTech Radio Show -->
       <div class="tab-pane active" id="lvtech">
-        <h1>LVTech Radio: 12PM - 1PM</h1>
-        <p class="lead">{{lvtech.title}}</p>
-        <div ng-repeat="track in lvtech.tracks" class="row">
-          <h3>{{track.title}}</h3>
-          <div class="col-md-4" >
-            <p>{{track.description}}</p>
+        <div class="row page-header">
+          <div class="col-md-10">
+            <h1>LVTech Radio: 12PM - 1PM</h1>
+            <p class="lead">
+              {{lvtech.title}}
+            </p>
           </div>
-          <div class="col-md-8" ng-bind-html-unsafe="track.embed"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 panel-group" id="lvtech-accordion" >
+            <div class="panel panel-default" ng-repeat="track in lvtech.tracks">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <a href="{{track.url}}"><span class="glyphicon glyphicon-play"></span></a>
+                  <a data-toggle="collapse" data-parent="#lvtech-accordion" href="#lvtech-show-{{$index}}">{{track.title}}<span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
+                </h3>
+              </div>
+              <div id="lvtech-show-{{$index}}" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p linkify="twitter">{{track.description}}</p>
+                </div>
+                <div class="panel-footer"><a href="#">Download</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="list-group">
+              <a target="_blank" href="http://www.meetup.com/lehighvalleytech/" class="list-group-item">LVTech Meetup</a>
+              <a target="_blank" href="http://nextplex.com/lehigh-valley-pa/calendar" class="list-group-item">NextPlex Calendar</a>
+              <a target="_blank" href="http://soundcloud.com/lvtech" class="list-group-item">SoundCloud</a>
+            </div>
+            <iframe scrolling="no" frameborder="0" style="width:120px;height:60px;border:0;overflow:hidden;" src="http://www.stitcher.com/s/embed.php?eid=29962239&img=lg"></iframe>
+          </div>
         </div>
       </div>
+      <!-- LVTech Radio Show -->
+
 
       <div class="tab-pane" id="developers">
-        <h1>LVTech Radio: 12PM - 1PM</h1>
+        <h1>LVTech Radio: 12PM - 1PM </h1>
         <p class="lead">{{developers.title}}</p>
         <div ng-repeat="track in developers.tracks" class="row">
-          <h3>{{track.title}}</h3>
-          <div class="col-md-4" >
+          <h3>{{track.title}} <a href="{{track.url}}" class="btn btn-primary">Play <span class="glyphicon glyphicon-play"></span></a></h3>
+          <div class="col-md-8" >
             <p>{{track.description}}</p>
           </div>
-          <div class="col-md-8" ng-bind-html-unsafe="track.embed"></div>
         </div>
       </div>
     </div>

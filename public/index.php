@@ -66,12 +66,6 @@ $app->get($route, function (App $app) use ($cache) {
             $app->response()->getHeaders()->addHeaderLine('Content-Type', 'application/json');
             $feed = new $class($playlist); //TODO: odd usage to pull the rss data and push into json, feels wrong
             $feed = $feed->jsonSerialize();
-
-            foreach($feed['tracks'] as $index => $data){
-                $oembed = $soundcloud->getOembed($data['url']);
-                $feed['tracks'][$index]['embed'] = $oembed->get('html');
-            }
-
             $app->response()->setContent(json_encode($feed));
             break;
     }
