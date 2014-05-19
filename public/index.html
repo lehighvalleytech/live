@@ -47,6 +47,7 @@
         <ul class="nav navbar-nav">
           <li><a href="#lvtech" data-toggle="tab">LVTech Radio</a></li>
           <li><a href="#developers" data-toggle="tab">Developers! Show</a></li>
+          <li><a href="#startup" data-toggle="tab">Startup Lehigh Valley</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -131,9 +132,9 @@
       </div>
       <!-- LVTech Radio Show -->
 
-
+      <!-- Developers -->
       <div class="tab-pane" id="developers">
-        <h1>LVTech Radio: 12PM - 1PM </h1>
+        <h1>The Developers (and designers) Show!: 11AM - 12PM </h1>
         <p class="lead">{{developers.title}}</p>
         <div ng-repeat="track in developers.tracks" class="row">
           <h3>{{track.title}} <a href="{{track.url}}" class="btn btn-primary">Play <span class="glyphicon glyphicon-play"></span></a></h3>
@@ -142,6 +143,21 @@
           </div>
         </div>
       </div>
+      <!-- Developers -->
+
+      <!-- Startup -->
+      <div class="tab-pane" id="startup">
+        <h1>Startup Lehigh Valley: 1PM - 2PM (4th Wednesday) </h1>
+        <p class="lead">{{startup.title}}</p>
+        <div ng-repeat="track in startup.tracks" class="row">
+          <h3>{{track.title}} <a href="{{track.url}}" class="btn btn-primary">Play <span class="glyphicon glyphicon-play"></span></a></h3>
+          <div class="col-md-8" >
+            <p>{{track.description}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- Startup -->
+
     </div>
 
   </div><!-- /.container -->

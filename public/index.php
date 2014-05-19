@@ -26,7 +26,7 @@ $cache = Zend\Cache\StorageFactory::factory(array(
 $route = SegmentRoute::factory(array(
     'route' => '/feed/:name[.:format]',
     'constraints' => array(
-        'name'   => '(lvtech|developers)',
+        'name'   => '(lvtech|developers|startup)',
         'format' => '(rss|atom|json)',
     ),
     'defaults' => array(
@@ -46,6 +46,10 @@ $app->get($route, function (App $app) use ($cache) {
             break;
         case 'developers';
             $playlist = '3894559';
+            $class = '\LVTech\Radio\Feed\Developers';
+            break;
+        case 'startup';
+            $playlist = '35401245';
             $class = '\LVTech\Radio\Feed\Developers';
             break;
         default:

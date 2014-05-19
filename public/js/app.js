@@ -12,6 +12,10 @@ lvtr.controller('FeedCtrl', ['$scope', '$http', function($scope, $http){
     $http.get('/feed/developers.json').success(function(data){
         $scope.developers = data;
     });
+
+    $http.get('/feed/startup.json').success(function(data){
+        $scope.startup = data;
+    });
 }]);
 
 
