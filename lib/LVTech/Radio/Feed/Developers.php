@@ -20,7 +20,7 @@ class Developers extends \LVTech\Radio\Feed
         $this->feed->setTitle('The Developers! Show [LVTech Radio]')
                    ->setLink('http://radio.lehighvalleytech.org/')
                    ->setFeedLink('http://radio.lehighvalleytech.org/feed/developers', $this->type)
-                   ->setDescription('Developers talking about development. Mark Koberlein hosts live every 2nd and 4th Wednesday at 2PM. Podcast released one week later.')
+                   ->setDescription('Developers talking about development. Mark Koberlein hosts live every 2nd and 4th Wednesday at 11AM. Podcast released when Tim gets to it.')
                    ->setDateModified(new \DateTime());
 
     }

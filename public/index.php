@@ -50,7 +50,7 @@ $app->get($route, function (App $app) use ($cache) {
             break;
         case 'startup';
             $playlist = '35401245';
-            $class = '\LVTech\Radio\Feed\Developers';
+            $class = '\LVTech\Radio\Feed\Startup';
             break;
         default:
             $app->halt('invalid feed');

@@ -20,7 +20,7 @@ class Startup extends \LVTech\Radio\Feed
         $this->feed->setTitle('Startup Lehigh Valley [LVTech Radio]')
                    ->setLink('http://radio.lehighvalleytech.org/')
                    ->setFeedLink('http://radio.lehighvalleytech.org/feed/startup', $this->type)
-                   ->setDescription('Wayne and Anthony talk everything Startups.')
+                   ->setDescription('Wayne and Anthony talk everything Startups, after the LVTech Show at 1PM. And we do mean everything.')
                    ->setDateModified(new \DateTime());
 
     }
