@@ -11,7 +11,7 @@ $cache = Zend\Cache\StorageFactory::factory(array(
         'name'    => 'filesystem',
         'options' => array(
             'ttl' => 3600,
-            'cache_dir' => __DIR__ . '/../var/cache'
+            'cache_dir' => __DIR__ . '/../../../shared/'
         ),
     ),
     'plugins' => array(
