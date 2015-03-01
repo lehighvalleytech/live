@@ -8,7 +8,7 @@ use Zend\Feed\Writer\Entry as Entry;
 /**
  * @author Tim Lytle <tim@timlytle.net>
  */
-class Developers extends \LVTech\Radio\Feed
+class Startup extends \LVTech\Radio\Feed
 {
     /**
      * TODO: make this more abstract and build from config file
@@ -17,10 +17,10 @@ class Developers extends \LVTech\Radio\Feed
      */
     protected function customFeed(FeedWriter $feed, Playlist $playlist)
     {
-        $this->feed->setTitle('The Developers! Show [LVTech Radio]')
+        $this->feed->setTitle('Startup Lehigh Valley [LVTech Radio]')
                    ->setLink('http://radio.lehighvalleytech.org/')
-                   ->setFeedLink('http://radio.lehighvalleytech.org/feed/developers', $this->type)
-                   ->setDescription('Developers talking about development. Mark Koberlein hosts live every 2nd and 4th Wednesday at 11AM. Podcast released when Tim gets to it.')
+                   ->setFeedLink('http://radio.lehighvalleytech.org/feed/startup', $this->type)
+                   ->setDescription('Wayne and Anthony talk everything Startups, after the LVTech Show at 1PM. And we do mean everything.')
                    ->setDateModified(new \DateTime());
 
     }

@@ -11,7 +11,7 @@ $cache = Zend\Cache\StorageFactory::factory(array(
         'name'    => 'filesystem',
         'options' => array(
             'ttl' => 3600,
-            'cache_dir' => __DIR__ . '/../var/cache'
+            'cache_dir' => __DIR__ . '/../../../shared/'
         ),
     ),
     'plugins' => array(
@@ -26,7 +26,7 @@ $cache = Zend\Cache\StorageFactory::factory(array(
 $route = SegmentRoute::factory(array(
     'route' => '/feed/:name[.:format]',
     'constraints' => array(
-        'name'   => '(lvtech|developers)',
+        'name'   => '(lvtech|developers|startup)',
         'format' => '(rss|atom|json)',
     ),
     'defaults' => array(
@@ -47,6 +47,10 @@ $app->get($route, function (App $app) use ($cache) {
         case 'developers';
             $playlist = '3894559';
             $class = '\LVTech\Radio\Feed\Developers';
+            break;
+        case 'startup';
+            $playlist = '35401245';
+            $class = '\LVTech\Radio\Feed\Startup';
             break;
         default:
             $app->halt('invalid feed');
