@@ -20,7 +20,7 @@ class LVTech extends \LVTech\Radio\Feed
         $this->feed->setTitle('LVTech Radio')
                    ->setLink('http://radio.lehighvalleytech.org/')
                    ->setFeedLink('http://radio.lehighvalleytech.org/feed/lvtech', $this->type)
-                   ->setDescription('The LVTech Radio Show - Live the 2nd and 4th Wednesdays at noon. Tech in the Lehigh Valley and beyond, podcast available shortly after show.')
+                   ->setDescription('The LVTech Radio Show - Live the 1st and 3rd Wednesdays at 4PM. Tech in the Lehigh Valley and beyond, podcast available shortly after show.')
                    ->setDateModified(new \DateTime());
     }
 
